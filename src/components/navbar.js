@@ -14,6 +14,7 @@ const Navbar = () => {
                 <Toolbar className="nav-container">
                     <Button component={Link} to="/"> Home </Button>
                     <Button component={Link} to="/notes"> Notes </Button>
+                    <Button compenent={Link} to='/blah"> Blah and Blah </Button>
                 </Toolbar>
               </AppBar>
             </>
