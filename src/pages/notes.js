@@ -3,7 +3,9 @@ import React, {useState} from 'react'
 const generateUniqueId = require('generate-unique-id');
 
 const ChangeNotes = () => {
-    
+
+      // axios.defaults.baseURL = 'https://us-central1-note-taking-app-852ae.cloudfunctions.net/api'
+
       const [newNote, setNewNote] = useState([])
       const [newUser, setNewUser] = useState([])
       const [tempNote, setTempNote] = useState([])
@@ -25,7 +27,7 @@ const ChangeNotes = () => {
           id: idNum
         }
         console.log(noteObj)
-        axios.post('/note', noteObj)
+        axios.post('https://us-central1-note-taking-app-852ae.cloudfunctions.net/api/note', noteObj)
           .then(response => {
             console.log(response)
           })

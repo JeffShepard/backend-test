@@ -2,13 +2,14 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 
 const Home = () => {
+    // axios.defaults.baseURL = 'https://us-central1-note-taking-app-852ae.cloudfunctions.net/api'
 
     const [notes, getNotes] = useState([]);
 
     useEffect ( () => {
     const allNotes=[];
     const getAllNotes = () => {
-        axios.get(`/notes`)
+        axios.get('https://us-central1-note-taking-app-852ae.cloudfunctions.net/api/notes')
             .then( (res) => { 
                 console.log(res)
                 res.data.forEach( note => 

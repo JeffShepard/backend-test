@@ -15,7 +15,7 @@ const Navbar = () => {
                     <Button component={Link} to="/"> Home </Button>
                     <Button component={Link} to="/notes"> Notes </Button>
                 </Toolbar>
-              </AppBar>
+            </AppBar>
             </>
         )
     
